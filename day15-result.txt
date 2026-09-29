@@ -1,0 +1,135 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/jayaprakash/scala-day15/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Scala-Spark-Day15-Practice (in build file:/home/jayaprakash/scala-day15/)
+[success] Total time: 0 s, completed Sep 29, 2026, 8:58:59 AM
+[info] compiling 1 Scala source to /home/jayaprakash/scala-day15/target/scala-2.13/classes ...
+[info] done compiling
+[info] running (fork) com.day15.Day15 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/29 08:59:07 WARN Utils: Your hostname, RAVI resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/29 08:59:07 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/29 08:59:07 INFO SparkContext: Running Spark version 3.5.6
+[error] 26/09/29 08:59:07 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/29 08:59:07 INFO SparkContext: Java version 17.0.20.1
+[error] 26/09/29 08:59:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/29 08:59:08 INFO ResourceUtils: ==============================================================
+[error] 26/09/29 08:59:08 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/29 08:59:08 INFO ResourceUtils: ==============================================================
+[error] 26/09/29 08:59:08 INFO SparkContext: Submitted application: Scala Spark Day 15 - UDF Practice
+[error] 26/09/29 08:59:08 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/29 08:59:08 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/29 08:59:08 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/29 08:59:08 INFO SecurityManager: Changing view acls to: jayaprakash
+[error] 26/09/29 08:59:08 INFO SecurityManager: Changing modify acls to: jayaprakash
+[error] 26/09/29 08:59:08 INFO SecurityManager: Changing view acls groups to: 
+[error] 26/09/29 08:59:08 INFO SecurityManager: Changing modify acls groups to: 
+[error] 26/09/29 08:59:08 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: jayaprakash; groups with view permissions: EMPTY; users with modify permissions: jayaprakash; groups with modify permissions: EMPTY
+[error] 26/09/29 08:59:08 INFO Utils: Successfully started service 'sparkDriver' on port 42587.
+[error] 26/09/29 08:59:08 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/29 08:59:08 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/29 08:59:08 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/29 08:59:08 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/29 08:59:08 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/29 08:59:08 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-84c112e0-7a23-412c-aacb-693f49073dd9
+[error] 26/09/29 08:59:08 INFO MemoryStore: MemoryStore started with capacity 994.8 MiB
+[error] 26/09/29 08:59:08 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/29 08:59:08 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/29 08:59:08 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/29 08:59:08 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/29 08:59:08 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/29 08:59:08 INFO Executor: Java version 17.0.20.1
+[error] 26/09/29 08:59:08 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/29 08:59:08 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@41eb94bc for default.
+[error] 26/09/29 08:59:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34561.
+[error] 26/09/29 08:59:08 INFO NettyBlockTransferService: Server created on 10.255.255.254:34561
+[error] 26/09/29 08:59:08 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/29 08:59:08 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 34561, None)
+[error] 26/09/29 08:59:08 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:34561 with 994.8 MiB RAM, BlockManagerId(driver, 10.255.255.254, 34561, None)
+[error] 26/09/29 08:59:08 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 34561, None)
+[error] 26/09/29 08:59:08 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 34561, None)
+[info] ========================================
+[info] DAY 15 - UDF PRACTICE
+[info] ========================================
+[info] 1. ORIGINAL TRANSACTION DATA
+[info] +-----------+-------------+-----------------+
+[info] |customer_id|customer_name|transaction_value|
+[info] +-----------+-------------+-----------------+
+[info] |       C001|         Jaya|             5000|
+[info] |       C002|         Ravi|            15000|
+[info] |       C003|      Prakash|            28000|
+[info] |       C004|         Anil|            45000|
+[info] |       C005|       Suresh|             8000|
+[info] |       C006|        Kiran|            35000|
+[info] |       C007|        Arjun|            12000|
+[info] |       C008|        Manoj|            60000|
+[info] |       C009|        Rahul|            22000|
+[info] |       C010|        Vinay|            70000|
+[info] +-----------+-------------+-----------------+
+[info] 2. UDF - CUSTOMER RISK CATEGORY
+[info] +-----------+-------------+-----------------+-------------+
+[info] |customer_id|customer_name|transaction_value|risk_category|
+[info] +-----------+-------------+-----------------+-------------+
+[info] |       C001|         Jaya|             5000|     Low Risk|
+[info] |       C002|         Ravi|            15000|     Low Risk|
+[info] |       C003|      Prakash|            28000|  Medium Risk|
+[info] |       C004|         Anil|            45000|  Medium Risk|
+[info] |       C005|       Suresh|             8000|     Low Risk|
+[info] |       C006|        Kiran|            35000|  Medium Risk|
+[info] |       C007|        Arjun|            12000|     Low Risk|
+[info] |       C008|        Manoj|            60000|    High Risk|
+[info] |       C009|        Rahul|            22000|  Medium Risk|
+[info] |       C010|        Vinay|            70000|    High Risk|
+[info] +-----------+-------------+-----------------+-------------+
+[info] 3. BUILT-IN SPARK FUNCTION
+[info] +-----------+-------------+-----------------+-----------------+
+[info] |customer_id|customer_name|transaction_value|transaction_level|
+[info] +-----------+-------------+-----------------+-----------------+
+[info] |       C001|         Jaya|             5000|              Low|
+[info] |       C002|         Ravi|            15000|              Low|
+[info] |       C003|      Prakash|            28000|           Medium|
+[info] |       C004|         Anil|            45000|           Medium|
+[info] |       C005|       Suresh|             8000|              Low|
+[info] |       C006|        Kiran|            35000|           Medium|
+[info] |       C007|        Arjun|            12000|              Low|
+[info] |       C008|        Manoj|            60000|             High|
+[info] |       C009|        Rahul|            22000|           Medium|
+[info] |       C010|        Vinay|            70000|             High|
+[info] +-----------+-------------+-----------------+-----------------+
+[info] 4. REGISTERED UDF
+[info] UDF 'classifyRisk' registered successfully.
+[info] 5. REGISTERED UDF USING SPARK SQL
+[info] +-----------+-------------+-----------------+-----------------+
+[info] |customer_id|customer_name|transaction_value|sql_risk_category|
+[info] +-----------+-------------+-----------------+-----------------+
+[info] |       C010|        Vinay|            70000|        High Risk|
+[info] |       C008|        Manoj|            60000|        High Risk|
+[info] |       C004|         Anil|            45000|      Medium Risk|
+[info] |       C006|        Kiran|            35000|      Medium Risk|
+[info] |       C003|      Prakash|            28000|      Medium Risk|
+[info] |       C009|        Rahul|            22000|      Medium Risk|
+[info] |       C002|         Ravi|            15000|         Low Risk|
+[info] |       C007|        Arjun|            12000|         Low Risk|
+[info] |       C005|       Suresh|             8000|         Low Risk|
+[info] |       C001|         Jaya|             5000|         Low Risk|
+[info] +-----------+-------------+-----------------+-----------------+
+[info] 6. RISK CATEGORY SUMMARY
+[info] +-------------+-----+
+[info] |risk_category|count|
+[info] +-------------+-----+
+[info] |    High Risk|    2|
+[info] |     Low Risk|    4|
+[info] |  Medium Risk|    4|
+[info] +-------------+-----+
+[info] 7. UDF vs BUILT-IN FUNCTION
+[info] UDF      : Custom Scala logic that can be reused in Spark.
+[info] Built-in  : Native Spark functions such as when(), otherwise().
+[info] Built-in functions are generally preferred when they can solve the problem.
+[info] 8. DAY 15 CONCEPTS
+[info] Scala Function -> udf() -> DataFrame withColumn()
+[info] Registered UDF can also be called from Spark SQL.
+[info] Customer risk is classified using transaction value.
+[info] ========================================
+[info] DAY 15 COMPLETED SUCCESSFULLY
+[info] ========================================
+[success] Total time: 16 s, completed Sep 29, 2026, 8:59:14 AM
